@@ -1,8 +1,8 @@
 {
   "name": "monorepo",
   "private": true,
-  "dependencies": {},
   "devDependencies": {
+    "@changesets/cli": "^2.27.7",
     "lerna": "8.1.4"
   },
   "engines": {
