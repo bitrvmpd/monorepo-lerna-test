@@ -30,7 +30,7 @@ jobs:
       - name: Create Release Pull Request
         uses: changesets/action@v1
         with:
-          publish: pnpm lerna build && npm_config_registry=https://npm.pkg.github.com pnpm changeset publish
+          publish: pnpm lerna run build && npm_config_registry=https://npm.pkg.github.com pnpm changeset publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
