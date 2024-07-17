@@ -9,5 +9,8 @@
     "node": "20.15.1",
     "pnpm": ">=9.5.0"
   },
+  "scripts": {
+    "publish": "pnpm lerna run build; npm_config_registry=https://npm.pkg.github.com pnpm changeset publish"
+  },
   "packageManager": "pnpm@9.5.0"
 }
