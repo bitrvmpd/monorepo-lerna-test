@@ -1,0 +1,46 @@
+{
+  "targetDefaults": {
+    "docusaurus": {
+      "dependsOn": []
+    },
+    "start": {
+      "dependsOn": []
+    },
+    "build": {
+      "cache": true,
+      "dependsOn": [],
+      "outputs": ["{projectRoot}/build", "{projectRoot}/dist"]
+    },
+    "swizzle": {
+      "dependsOn": []
+    },
+    "deploy": {
+      "dependsOn": []
+    },
+    "clear": {
+      "dependsOn": []
+    },
+    "serve": {
+      "dependsOn": []
+    },
+    "write-translations": {
+      "dependsOn": []
+    },
+    "write-heading-ids": {
+      "dependsOn": []
+    },
+    "typecheck": {
+      "cache": true,
+      "dependsOn": []
+    },
+    "dev": {
+      "dependsOn": []
+    },
+    "preview": {
+      "dependsOn": []
+    },
+    "astro": {
+      "dependsOn": []
+    }
+  }
+}
