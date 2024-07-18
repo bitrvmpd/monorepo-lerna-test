@@ -1,5 +1,13 @@
 # Change Log
 
+## 0.1.0
+
+### Minor Changes
+
+- beada74: This is a test changeset message
+
+  It supports markdown
+
 ## 0.0.4
 
 ### Patch Changes
