@@ -23,15 +23,10 @@ env:
   NPM_CONFIG_PROVENANCE: true
 
 jobs:
-  authorize:
-    name: Authorize Actor
-    uses: ./.github/workflows/authorize.yml
-    secrets: inherit
   release:
     permissions:
       contents: write
       id-token: write
-    needs: [authorize]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
@@ -48,6 +43,11 @@ jobs:
 
       - name: Install Dependencies
         run: pnpm install
+
+      - name: Git Setup
+        run: |
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
 
       - name: Set publishing config
         run: pnpm config set '//npm.pkg.github.com/:_authToken' "${NODE_AUTH_TOKEN}"
