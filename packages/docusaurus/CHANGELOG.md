@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.2.0
+
+### Minor Changes
+
+- efa9439: Changing docu
+
 ## 0.1.0
 
 ### Minor Changes
