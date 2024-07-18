@@ -1,21 +1,15 @@
 # Change Log
 
-## 0.1.0
-
-### Minor Changes
-
-- beada74: This is a test changeset message
-
-  It supports markdown
-
-## 0.0.4
-
-### Patch Changes
-
-- d801e85: chore: test lerna publish
-
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## 0.1.1 (2024-07-18)
+
+**Note:** Version bump only for package @bitrvmpd/starlight-example
+
+
+
+
 
 ## [0.0.3](https://github.com/bitrvmpd/monorepo-lerna-test/compare/starlight-example@0.0.2...starlight-example@0.0.3) (2024-07-17)
 

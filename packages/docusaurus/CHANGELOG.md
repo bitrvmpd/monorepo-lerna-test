@@ -1,19 +1,15 @@
 # Change Log
 
-## 0.2.0
-
-### Minor Changes
-
-- efa9439: Changing docu
-
-## 0.1.0
-
-### Minor Changes
-
-- 3fcc90e: Testing new feature
-
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## 0.2.1 (2024-07-18)
+
+**Note:** Version bump only for package @bitrvmpd/packages-docusaurus
+
+
+
+
 
 ## [0.0.5](https://github.com/bitrvmpd/monorepo-lerna-test/compare/packages-docusaurus@0.0.3...packages-docusaurus@0.0.5) (2024-07-17)
 
