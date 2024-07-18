@@ -1,0 +1,62 @@
+name: Manual NPM Publish
+
+on:
+  workflow_dispatch:
+    inputs:
+      releaseType:
+        description: "Release Type"
+        required: true
+        type: choice
+        default: "patch"
+        options:
+          - patch
+          - minor
+          - major
+          - premajor
+      distTag:
+        description: 'NPM tag (e.g. use "next --canary" to release a test version, add "--force-publish" to release all packages)'
+        required: true
+        default: "latest"
+
+env:
+  NPM_TOKEN: ${{secrets.GITHUB_TOKEN}}
+  NPM_CONFIG_PROVENANCE: true
+
+jobs:
+  authorize:
+    name: Authorize Actor
+    uses: ./.github/workflows/authorize.yml
+    secrets: inherit
+  release:
+    permissions:
+      contents: write
+      id-token: write
+    needs: [authorize]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: package.json
+
+      - name: Enable Corepack
+        id: enable-corepack
+        run: corepack enable
+
+      - name: Install Dependencies
+        run: pnpm install
+
+      - name: Set publishing config
+        run: pnpm config set '//npm.pkg.github.com/:_authToken' "${NODE_AUTH_TOKEN}"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Release
+        run: |
+          pnpm lerna version --conventional-commits --yes
+          pnpm lerna publish ${{github.event.inputs.releaseType}} --exact --yes --dist-tag ${{github.event.inputs.distTag}}
+        env:
+          NODE_ENV: production
+          GITHUB_AUTH: ${{ secrets.GITHUB_TOKEN }}
