@@ -39,7 +39,9 @@ jobs:
 
       - name: Enable Corepack
         id: enable-corepack
-        run: corepack enable
+        run: |
+          npm install -g corepack@latest
+          corepack enable
 
       - name: Install Dependencies
         run: pnpm install
