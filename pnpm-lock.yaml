@@ -16380,7 +16380,7 @@ snapshots:
 
   regenerator-transform@0.15.2:
     dependencies:
-      '@babel/runtime': 7.27.6
+      '@babel/runtime': 7.27.0
 
   regex-recursion@5.1.1:
     dependencies:
