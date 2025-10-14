@@ -3,7 +3,7 @@
   "private": true,
   "devDependencies": {
     "@changesets/cli": "^2.27.7",
-    "lerna": "8.2.3"
+    "lerna": "8.2.4"
   },
   "engines": {
     "node": "22.19.0",
