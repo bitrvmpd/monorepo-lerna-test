@@ -12,5 +12,5 @@
   "scripts": {
     "publish": "pnpm lerna run build; npm_config_registry=https://npm.pkg.github.com pnpm changeset publish"
   },
-  "packageManager": "pnpm@10.7.1"
+  "packageManager": "pnpm@10.26.2"
 }
